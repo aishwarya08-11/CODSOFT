@@ -16,7 +16,7 @@ bool makeMove(int player, int choice);
 int main() {
     char playAgain;
     do {
-        resetBoard(); // Reset the board for a new game
+        resetBoard(); 
         int player = 1, i, choice;
 
         do {
@@ -27,7 +27,7 @@ int main() {
 
             if (!makeMove(player, choice)) {
                 cout << "Invalid move, try again." << endl;
-                player--; // Keep the player in the same turn
+                player--; 
             }
 
             i = checkwin();
@@ -47,12 +47,7 @@ int main() {
     return 0;
 }
 
-/*********************************************
-    FUNCTION TO RETURN GAME STATUS
-    1 FOR GAME IS OVER WITH RESULT
-    -1 FOR GAME IS IN PROGRESS
-    0 GAME IS OVER AND NO RESULT
-**********************************************/
+
 int checkwin() {
     if (square[1] == square[2] && square[2] == square[3])
         return 1;
@@ -73,16 +68,14 @@ int checkwin() {
     else if (square[1] != '1' && square[2] != '2' && square[3] != '3' 
              && square[4] != '4' && square[5] != '5' && square[6] != '6' 
              && square[7] != '7' && square[8] != '8' && square[9] != '9')
-        return 0; // Draw
+        return 0;
     else
-        return -1; // Game in progress
+        return -1; 
 }
 
-/*******************************************************************
-     FUNCTION TO DRAW BOARD OF TIC TAC TOE WITH PLAYER'S MARK
-********************************************************************/
+
 void board() {
-    system("cls"); // Clear the console (platform-specific)
+    system("cls"); 
     cout << "\n\n\tTic Tac Toe\n\n";
     cout << "Player 1 (X)  -  Player 2 (O)" << endl << endl;
 
