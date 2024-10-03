@@ -5,9 +5,8 @@
 using namespace std;
 
 int main() {
-    srand(static_cast<unsigned int>(time(0))); // Seed for random number generation
-    int numberToGuess = rand() % 100 + 1; // Random number between 1 and 100
-    int playerGuess = 0;
+    srand(static_cast<unsigned int>(time(0))); 
+    int numberToGuess = rand() % 100 + 1; 
     int attempts = 0;
     char playAgain;
 
@@ -15,7 +14,7 @@ int main() {
         cout << "Welcome to the Number Guessing Game!" << endl;
         cout << "I'm thinking of a number between 1 and 100." << endl;
 
-        // Reset attempts for the new game
+        
         attempts = 0;
 
         do {
@@ -38,7 +37,7 @@ int main() {
         cin >> playAgain;
         
         if (playAgain == 'y' || playAgain == 'Y') {
-            numberToGuess = rand() % 100 + 1; // Generate a new number
+            numberToGuess = rand() % 100 + 1; 
         }
 
     } while (playAgain == 'y' || playAgain == 'Y');
