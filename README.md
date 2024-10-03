@@ -1,2 +1,2 @@
-*This is my Codsoft project.*
+_This is my Codsoft project._
 It contains all tasks.
