@@ -9,6 +9,7 @@ int main() {
     int numberToGuess = rand() % 100 + 1; 
     int attempts = 0;
     char playAgain;
+    int playerGuess;
 
     do {
         cout << "Welcome to the Number Guessing Game!" << endl;
